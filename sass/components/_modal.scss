@@ -1,0 +1,149 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 100;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-color-txt);
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: var(--main-color-txt);
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  &__input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border var(--anime-time-cubic);
+    outline: transparent;
+    padding-right: 5px;
+    padding-left: 35px;
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border: 1px solid var(--accent-color-txt);
+    cursor: pointer;
+  }
+  &__input:hover + &__icon,
+  &__input:focus + &__icon {
+    fill: var(--accent-color-txt);
+  }
+
+  &__icon {
+    fill: var(--second-color-txt);
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    transition: fill var(--anime-time-cubic);
+  }
+
+  &__coment {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    resize: none;
+    transition: border var(--anime-time-cubic);
+    padding: 5px;
+  }
+
+  &__coment:hover,
+  &__coment:focus {
+    border: 1px solid var(--accent-color-txt);
+    cursor: pointer;
+  }
+
+  &__conteiner-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__conteiner-input:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__conteiner {
+    width: 448px;
+    height: 342px;
+    margin: auto;
+  }
+  &__close-icon {
+    fill: currentColor;
+  }
+
+  &__close-btn:hover {
+    color: var(--accent-color-txt);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transform: translate(-25%, 25%);
+
+    transition: color var(--anime-time-cubic);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity 250ms;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+}

@@ -1,0 +1,24 @@
+.logo {
+  font-family: var(--logo-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--accent-color-txt);
+  &--header {
+    margin-right: 93px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  &--header-txt {
+    color: var(--black-color-txt);
+  }
+  &--footer-txt {
+    color: var(--white-color-txt);
+  }
+
+  &--footer {
+    padding-top: 60px;
+  }
+}

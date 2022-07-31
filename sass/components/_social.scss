@@ -1,0 +1,52 @@
+.social {
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color-txt);
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background var(--anime-time-cubic), color var(--anime-time-cubic);
+    /* outline: 1px solid red; */
+  }
+
+  &__link--teamcard {
+    color: var(--icon-color);
+    background-color: var(--white-color-txt);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color-txt);
+    color: var(--white-color-txt);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: currentColor;
+  }
+  &__link--footer {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white-color-txt);
+  }
+}

@@ -1,0 +1,33 @@
+// utils
+@import './utils/variables';
+@import './utils/resrt';
+@import './utils/common';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+// components
+@import './components/logo';
+@import './components/nav';
+@import './components/contact';
+@import './components/social';
+@import './components/address';
+@import './components/submit';
+@import './components/cardset';
+@import './components/overlay';
+@import './components/modal';
+@import './components/checkbox';
+@import './components/menu-btn';
+@import './components/buttons';
+@import './components/conteiner';
+@import './components/section';
+@import './components/title-section';
+@import './components/footer-info';
+
+// layouts
+@import './layouts/benefits';
+@import './layouts/clients';
+@import './layouts/footer';
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/work';
+@import './layouts/team';

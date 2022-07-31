@@ -1,0 +1,30 @@
+.clients {
+  @extend %section;
+  padding-top: 94px;
+
+  &__link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    color: var(--icon-color);
+    transition: color var(--anime-time-cubic);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color-txt);
+    border-color: var(--accent-color-txt);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}

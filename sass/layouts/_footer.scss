@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--dark-bg-color);
+
+  &-section {
+    display: flex;
+    padding-top: 66px;
+
+    width: 100%;
+  }
+}

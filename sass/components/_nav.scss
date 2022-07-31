@@ -1,0 +1,50 @@
+.nav {
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--second-color-txt);
+    position: relative;
+    padding-bottom: 32px;
+
+    transition: color var(--anime-time-cubic);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color-txt);
+  }
+
+  &__list {
+    display: flex;
+    padding-left: 0;
+  }
+
+  &__link--current {
+    color: var(--accent-color-txt);
+  }
+
+  &__link--current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translatey(6px);
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 2px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
