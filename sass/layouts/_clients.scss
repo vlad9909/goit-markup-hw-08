@@ -1,9 +1,8 @@
 .clients {
-  @extend %section;
   padding-top: 94px;
 
   &__link {
-    width: 170px;
+    // width: 170px;
     height: 92px;
     display: flex;
     justify-content: center;
@@ -21,9 +20,18 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    --items: 2;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      --items: 3;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --items: 6;
+    }
   }
+
   &__icon {
     fill: currentColor;
   }

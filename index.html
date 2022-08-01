@@ -24,11 +24,58 @@
   </head>
   <body>
     <header class="header">
-      <!--шапка-->
       <div class="conteiner header__conteiner">
         <a class="link logo logo--header" href="./"
           >Web<span class="logo--header-txt">Studio</span></a
         >
+        <button class="mobile-menu-btn" type="button" data-menu-button>
+          <svg class="mobile-menu-icons" width="24px" height="16px">
+            <use class="mobile-icon-burger" href="./images/icons.svg.svg#icon-burger-menu"></use>
+            <use class="mobile-icon-close" href="./images/icons.svg.svg#icon-mobile-close"></use>
+          </svg>
+        </button>
+        <div class="mobile" data-menu>
+          <ul class="mobile__nav-list list">
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link mobile-nav__link--current" href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile__contact-list list">
+            <li class="mobile__contact-item">
+              <a class="mobile__contact-link mobile-tel link" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile__contact-item">
+              <a class="mobile__contact-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile__social-list list">
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Instagram</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Twitter</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Facebook</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -55,17 +102,57 @@
           >
         </div>
       </div>
+      <div class="mobile" data-menu>
+        <ul class="mobile__nav-list list">
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link mobile-nav__link--current" href="./index.html"
+              >Студия</a
+            >
+          </li>
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile__contact-list list">
+          <li class="mobile__contact-item">
+            <a class="mobile__contact-link mobile-tel link" href="tel:+380961111111">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__contact-item">
+            <a class="mobile__contact-link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile__social-list list">
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Instagram</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Twitter</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Facebook</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <!--Секция герой-->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="conteiner hero__conteiner">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="btn--hero" type="button" data-modal-open>Заказать услугу</button>
         </div>
 
-        <!-- Модальне вікно -->
+       
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="modal__close-btn" type="button" data-modal-close>
@@ -144,12 +231,12 @@
             </form>
           </div>
         </div>
-      </section>
-      <section class="benefits">
+      </section> -->
+      <section class="benefits section">
         <div class="conteiner">
           <h2 class="visually-hidden">Наши преймущества</h2>
-          <ul class="benefits__list list">
-            <li class="benefits__item">
+          <ul class="benefits__list card-set list">
+            <li class="benefits__item card-set__item">
               <div class="benefits__icon-box">
                 <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/icons.svg.svg#icon-sputnik"></use>
@@ -160,7 +247,7 @@
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item card-set__item">
               <div class="benefits__icon-box">
                 <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/icons.svg.svg#icon-clock"></use>
@@ -171,7 +258,7 @@
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item card-set__item">
               <div class="benefits__icon-box">
                 <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/icons.svg.svg#icon-diagram"></use>
@@ -182,7 +269,7 @@
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item card-set__item">
               <div class="benefits__icon-box">
                 <svg class="benefits__icon" width="70" height="70">
                   <use href="./images/icons.svg.svg#icon-astronaut"></use>
@@ -196,7 +283,7 @@
           </ul>
         </div>
       </section>
-      <section class="work">
+      <section class="work section">
         <div class="conteiner">
           <h2 class="title-section">Чем мы занимаемся</h2>
           <ul class="work__list list">
@@ -230,11 +317,11 @@
           </ul>
         </div>
       </section>
-      <section class="team">
+      <section class="team sectio">
         <div class="conteiner">
           <h2 class="title-section">Наша команда</h2>
-          <ul class="team__list list">
-            <li class="team__item">
+          <ul class="team__list card-set list">
+            <li class="card-set__item team__item">
               <img
                 class="team__img"
                 src="./images/webstudio/developer1.jpg"
@@ -301,7 +388,7 @@
               </div>
             </li>
 
-            <li class="team__item">
+            <li class="card-set__item team__item">
               <img
                 class="team__img"
                 src="./images/webstudio/developer2.jpg"
@@ -367,7 +454,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="card-set__item team__item">
               <img
                 class="team__img"
                 src="./images/webstudio/developer3.jpg"
@@ -433,7 +520,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="card-set__item team__item">
               <img
                 class="team__img"
                 src="./images/webstudio/developer4.jpg"
@@ -502,46 +589,46 @@
           </ul>
         </div>
       </section>
-      <section class="clients">
+      <section class="clients section">
         <div class="conteiner">
           <h2 class="title-section">Постоянные клиенты</h2>
-          <ul class="clients__list list">
-            <li class="clients__item">
+          <ul class="clients__list card-set list">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group1"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group2"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group3"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group4"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group5"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__item">
+            <li class="card-set__item clients__item">
               <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg.svg#icon-group6"></use>
@@ -553,8 +640,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <!--Подвал-->
+    <!-- <footer class="footer">
+      
 
       <div class="conteiner footer-section">
         <div class="footer-info">
@@ -653,8 +740,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
