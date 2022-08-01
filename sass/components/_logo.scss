@@ -2,14 +2,27 @@
   font-family: var(--logo-font);
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   color: var(--accent-color-txt);
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    padding: 0;
+  }
+
   &--header {
-    margin-right: 93px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
   &--header-txt {
     color: var(--black-color-txt);
@@ -19,6 +32,6 @@
   }
 
   &--footer {
-    padding-top: 60px;
+    padding: 0;
   }
 }

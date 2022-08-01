@@ -1,4 +1,10 @@
 .benefits {
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -19,7 +25,7 @@
   }
 
   &__list {
-    padding-top: 94px;
+    // padding-top: 94px;
     --items: 1;
 
     @media screen and (min-width: 768px) {

@@ -1,5 +1,20 @@
 .submit {
-  margin-left: 93px;
+  // margin-left: 93px;
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin: 0;
+    margin-left: auto;
+  }
 
   &__title {
     font-weight: 700;
@@ -9,10 +24,14 @@
     text-transform: uppercase;
 
     color: var(--white-color-txt);
+
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+    }
   }
 
   &__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -21,9 +40,26 @@
     padding-left: 10px;
     color: var(--white-color-txt);
     outline: transparent;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin: 0;
+    }
   }
   &__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
   }
 
   &__icon {
