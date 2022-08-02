@@ -6,14 +6,28 @@
 
   &__txt {
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.03em;
     color: var(--main-color-txt);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
   }
 
   &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.03em;
     color: var(--accent-color-txt);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
   }
 
   &__label {

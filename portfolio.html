@@ -23,11 +23,58 @@
   </head>
   <body>
     <header class="header">
-      <!--шапка-->
       <div class="conteiner header__conteiner">
         <a class="link logo logo--header" href="./"
           >Web<span class="logo--header-txt">Studio</span></a
         >
+        <button class="mobile-menu-btn" type="button" data-menu-button>
+          <svg class="mobile-menu-icons" width="24px" height="16px">
+            <use class="mobile-icon-burger" href="./images/icons.svg.svg#icon-burger-menu"></use>
+            <use class="mobile-icon-close" href="./images/icons.svg.svg#icon-mobile-close"></use>
+          </svg>
+        </button>
+        <div class="mobile" data-menu>
+          <ul class="mobile__nav-list list">
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link" href="./">Студия</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link mobile-nav__link--current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile__nav-item">
+              <a class="mobile__nav-link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile__contact-list list">
+            <li class="mobile__contact-item">
+              <a class="mobile__contact-link mobile-tel link" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile__contact-item">
+              <a class="mobile__contact-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile__social-list list">
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Instagram</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Twitter</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">Facebook</a>
+            </li>
+            <li class="mobile__social-item">
+              <a href="" class="mobile__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
@@ -53,6 +100,47 @@
             +38 096 111 11 11</a
           >
         </div>
+      </div>
+      <div class="mobile" data-menu>
+        <ul class="mobile__nav-list list">
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link mobile-nav__link--current" href="./index.html"
+              >Студия</a
+            >
+          </li>
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile__nav-item">
+            <a class="mobile__nav-link link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile__contact-list list">
+          <li class="mobile__contact-item">
+            <a class="mobile__contact-link mobile-tel link" href="tel:+380961111111">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__contact-item">
+            <a class="mobile__contact-link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile__social-list list">
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Instagram</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Twitter</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">Facebook</a>
+          </li>
+          <li class="mobile__social-item">
+            <a href="" class="mobile__social-link link">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -81,16 +169,41 @@
             </ul>
           </div>
           <div class="portfolio">
-            <ul class="portfolio__list list">
-              <li class="portfolio__item">
+            <ul class="portfolio__list card-set list">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.1.jpg"
-                      alt="Ноутбук с открытым сайтом"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-1_desc.jpg    1x,
+                          ./images/portfolio/portf-1_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-1_tabl.jpg    1x,
+                          ./images/portfolio/portf-1_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-1_mob.jpg    1x,
+                          ./images/portfolio/portf-1_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-1_desc.jpg"
+                        alt="Ноутбук с открытым сайтом"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -105,15 +218,40 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.2.jpg"
-                      alt="Постер с играющеми баскедболистами"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-2_desc.jpg    1x,
+                          ./images/portfolio/portf-2_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-2_tabl.jpg    1x,
+                          ./images/portfolio/portf-2_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-2_mob.jpg    1x,
+                          ./images/portfolio/portf-2_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-2_desc.jpg"
+                        alt="Постер с играющеми баскедболистами"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -128,15 +266,41 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.3.jpg"
-                      alt="Эмблема ресторана Seafood"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-3_desc.jpg    1x,
+                          ./images/portfolio/portf-3_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-3_tabl.jpg    1x,
+                          ./images/portfolio/portf-3_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-3_mob.jpg    1x,
+                          ./images/portfolio/portf-3_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-3_desc.jpg"
+                        alt="Эмблема ресторана Seafood"
+                      />
+                    </picture>
+
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -151,15 +315,40 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.4.jpg"
-                      alt="Наушники"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-4_desc.jpg    1x,
+                          ./images/portfolio/portf-4_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-4_tabl.jpg    1x,
+                          ./images/portfolio/portf-4_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-4_mob.jpg    1x,
+                          ./images/portfolio/portf-4_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-4_desc.jpg"
+                        alt="Наушники"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -174,15 +363,40 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.5.jpg"
-                      alt="две закрытых коробочки"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-5_desc.jpg    1x,
+                          ./images/portfolio/portf-5_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-5_tabl.jpg    1x,
+                          ./images/portfolio/portf-5_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-5_mob.jpg    1x,
+                          ./images/portfolio/portf-5_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-5_desc.jpg"
+                        alt="две закрытых коробочки"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -191,21 +405,47 @@
                       </p>
                     </div>
                   </div>
+
                   <div class="portfolio__txt-box">
                     <h2 class="portfolio__title">Проект Boxes</h2>
                     <p class="portfolio__txt">Приложение</p>
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.6.jpg"
-                      alt="Монитор на котором открыт веб-сайт"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-6_desc.jpg    1x,
+                          ./images/portfolio/portf-6_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-6_tabl.jpg    1x,
+                          ./images/portfolio/portf-6_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-6_mob.jpg    1x,
+                          ./images/portfolio/portf-6_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-6_desc.jpg"
+                        alt="Монитор на котором открыт веб-сайт"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -220,15 +460,41 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.7.jpg"
-                      alt="Открытая книга"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-7_desc.jpg    1x,
+                          ./images/portfolio/portf-7_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-7_tabl.jpg    1x,
+                          ./images/portfolio/portf-7_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-7_mob.jpg    1x,
+                          ./images/portfolio/portf-7_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-7_desc.jpg"
+                        alt="Открытая книга"
+                      />
+                    </picture>
+
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -243,15 +509,40 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.8.jpg"
-                      alt="Ярлык висящий на веревочке"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-8_desc.jpg    1x,
+                          ./images/portfolio/portf-8_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-8_tabl.jpg    1x,
+                          ./images/portfolio/portf-8_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-8_mob.jpg    1x,
+                          ./images/portfolio/portf-8_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-8_desc.jpg"
+                        alt="Ярлык висящий на веревочке"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -266,15 +557,40 @@
                   </div>
                 </a>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item card-set__item">
                 <a class="link portfolio__link" href="">
                   <div class="portfolio__box">
-                    <img
-                      class="portfolio__img"
-                      src="./images/webstudio/img2.9.jpg"
-                      alt="Ноутбук на котором работает человек"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px )"
+                        srcset="
+                          ./images/portfolio/portf-9_desc.jpg    1x,
+                          ./images/portfolio/portf-9_desc@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(min-width: 768px )"
+                        srcset="
+                          ./images/portfolio/portf-9_tabl.jpg    1x,
+                          ./images/portfolio/portf-9_tabl@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <source
+                        media="(max-width: 767px )"
+                        srcset="
+                          ./images/portfolio/portf-9_mob.jpg    1x,
+                          ./images/portfolio/portf-9_mob@2x.jpg 2x
+                        "
+                        type="image/jpg"
+                      />
+                      <img
+                        class="portfolio__img"
+                        src="./images/portfolio/portf-9_desc.jpg"
+                        alt="Ноутбук на котором работает человек"
+                      />
+                    </picture>
                     <div class="overlay">
                       <p class="overlay__desc">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -394,5 +710,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

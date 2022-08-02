@@ -37,9 +37,7 @@
         <div class="mobile" data-menu>
           <ul class="mobile__nav-list list">
             <li class="mobile__nav-item">
-              <a class="mobile__nav-link link mobile-nav__link--current" href="./index.html"
-                >Студия</a
-              >
+              <a class="mobile__nav-link link mobile-nav__link--current" href="./">Студия</a>
             </li>
             <li class="mobile__nav-item">
               <a class="mobile__nav-link link" href="./portfolio.html">Портфолио</a>
@@ -79,7 +77,7 @@
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
-              <a class="link nav__link nav__link--current" href="">Студия</a>
+              <a class="link nav__link nav__link--current" href="./index.html">Студия</a>
             </li>
             <li class="nav__item">
               <a class="link nav__link" href="./portfolio.html">Портфолио</a>
@@ -151,6 +149,8 @@
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="btn--hero" type="button" data-modal-open>Заказать услугу</button>
         </div>
+
+        <!-- Модальне вікно -->
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
@@ -287,30 +287,51 @@
           <h2 class="title-section">Чем мы занимаемся</h2>
           <ul class="work__list list">
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./images/webstudio/img1.jpg"
-                alt="Человек пишет код в vccode"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work/work-1_desc.jpg 1x, ./images/work/work-1_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-1_desc.jpg"
+                  alt="Человек пишет код в vccode"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__txt">Десктопные приложения</p>
             </li>
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./images/webstudio/img2.jpg"
-                alt="Человек разрабатывает приложение на мобильный"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work/work-2_desc.jpg 1x, ./images/work/work-2_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-2_desc.jpg"
+                  alt="Человек разрабатывает приложение на мобильный"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__txt">Мобильные приложения</p>
             </li>
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./images/webstudio/img3.jpg"
-                alt="Работа с фильтрами текста на планшете"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work/work-3_desc.jpg 1x, ./images/work/work-3_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-3_desc.jpg"
+                  alt="Работа с фильтрами текста на планшете"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="work__txt">Дизайнерские решения</p>
             </li>
           </ul>
@@ -321,12 +342,28 @@
           <h2 class="title-section">Наша команда</h2>
           <ul class="team__list card-set list">
             <li class="card-set__item team__item">
-              <img
-                class="team__img"
-                src="./images/webstudio/developer1.jpg"
-                alt="фото разработчика Игоря Демяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="./images/team/team-1_desc.jpg 1x, ./images/team/team-1_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/team/team-1_tabl.jpg 1x, ./images/team/team-1_tabl@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/team/team-1_mob.jpg 1x, ./images/team/team-1_mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-1_desc.jpg"
+                  alt="фото разработчика Игоря Демяненко"
+                />
+              </picture>
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p class="team__text" lang="en">Product Designer</p>
               <div class="social">
@@ -388,12 +425,28 @@
             </li>
 
             <li class="card-set__item team__item">
-              <img
-                class="team__img"
-                src="./images/webstudio/developer2.jpg"
-                alt="фото разработчика Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="./images/team/team-2_desc.jpg 1x, ./images/team/team-2_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/team/team-2_tabl.jpg 1x, ./images/team/team-2_tabl@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/team/team-2_mob.jpg 1x, ./images/team/team-2_mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-2_desc.jpg"
+                  alt="фото разработчика Ольга Репина"
+                />
+              </picture>
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__text" lang="en">Frontend Developer</p>
               <div class="social">
@@ -454,12 +507,28 @@
               </div>
             </li>
             <li class="card-set__item team__item">
-              <img
-                class="team__img"
-                src="./images/webstudio/developer3.jpg"
-                alt="фото разработчика Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="./images/team/team-3_desc.jpg 1x, ./images/team/team-3_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/team/team-3_tabl.jpg 1x, ./images/team/team-3_tabl@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/team/team-3_mob.jpg 1x, ./images/team/team-3_mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-3_desc.jpg"
+                  alt="фото разработчика Николай Тарасов"
+                />
+              </picture>
               <h3 class="team__name">Николай Тарасов</h3>
               <p class="team__text" lang="en">Marketing</p>
               <div class="social">
@@ -520,12 +589,28 @@
               </div>
             </li>
             <li class="card-set__item team__item">
-              <img
-                class="team__img"
-                src="./images/webstudio/developer4.jpg"
-                alt="фото разработчика Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="./images/team/team-4_desc.jpg 1x, ./images/team/team-4_desc@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px )"
+                  srcset="./images/team/team-4_tabl.jpg 1x, ./images/team/team-4_tabl@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px )"
+                  srcset="./images/team/team-4_mob.jpg 1x, ./images/team/team-4_mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="portfolio__img"
+                  src="./images/team/team-4_desc.jpg"
+                  alt="фото разработчика Михаил Ермаков"
+                />
+              </picture>
               <h3 class="team__name">Михаил Ермаков</h3>
               <p class="team__text" lang="en">UI Designer</p>
               <div class="social">
