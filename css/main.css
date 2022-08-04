@@ -67,10 +67,6 @@ img {
   margin: -1px;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 .logo {
   font-family: var(--logo-font);
   font-style: normal;
@@ -379,6 +375,11 @@ img {
   outline: transparent;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 479px) {
+  .submit__input {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .submit__input {
     width: 358px;
@@ -521,6 +522,11 @@ img {
   transition: transform 250ms;
   transition: transform 250ms, -webkit-transform 250ms;
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -539,6 +545,11 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 370px;
+}
+@media screen and (max-width: 479px) {
+  .modal__title {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__title {
@@ -565,6 +576,11 @@ img {
   outline: transparent;
   padding-right: 5px;
   padding-left: 35px;
+}
+@media screen and (max-width: 479px) {
+  .modal__input {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__input {
@@ -597,6 +613,11 @@ img {
   transition: border var(--anime-time-cubic);
   padding: 5px;
 }
+@media screen and (max-width: 479px) {
+  .modal__coment {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal__coment {
     width: 448px;
@@ -623,6 +644,11 @@ img {
   width: 448px;
   height: 342px;
   margin: auto;
+}
+@media screen and (max-width: 479px) {
+  .modal__conteiner {
+    width: 100%;
+  }
 }
 .modal__close-icon {
   fill: currentColor;
@@ -1338,6 +1364,11 @@ img {
   color: #ffffff;
   width: 360px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 479px) {
+  .hero__title {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {

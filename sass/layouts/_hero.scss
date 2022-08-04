@@ -55,6 +55,10 @@
     width: 360px;
     padding-bottom: 30px;
 
+    @media screen and (max-width: 479px) {
+      width: 100%;
+    }
+
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: calc(60 / 44);
